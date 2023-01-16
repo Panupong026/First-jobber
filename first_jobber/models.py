@@ -9,3 +9,18 @@ class Insurance(models.Model):
 
     def __str__(self):
         return self.name
+
+class User(models.Model):
+    username = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Coverage(models.Model):
+    insuranceId = models.ForeignKey(Insurance, on_delete=models.CASCADE, related_name='insuranceId')
+    car = models.IntegerField()
+    medicine = models.IntegerField()
+    third_party = models.IntegerField()
+    lost = models.BooleanField()
