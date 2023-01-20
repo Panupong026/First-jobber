@@ -6,6 +6,7 @@ class Insurance(models.Model):
     name = models.CharField(max_length=255)
     insurance_class = models.CharField(max_length=100)
     price = models.IntegerField()
+    urls = models.TextField(default='N/A')
 
     def __str__(self):
         return self.name
