@@ -4,12 +4,13 @@ from .models import Insurance, User, Coverage
 class InsuranceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Insurance
-        fields = ('name', 'insurance_class', 'price')
+        fields = ('name', 'insurance_class', 'price', 'urls')
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'name', 'password')
+        extra_kwargs = {'name': {'allow_null': True}}
 
 class CoverageSerializer(serializers.ModelSerializer):
     insuranceId = InsuranceSerializer()
