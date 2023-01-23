@@ -36,6 +36,7 @@ run the server
 
 ### Actual ERD
 
+![image](https://user-images.githubusercontent.com/116058313/213918411-c43aece5-b758-46d8-9b0c-af451f6a0cf1.png)
 
 
 ## Teachnology used
